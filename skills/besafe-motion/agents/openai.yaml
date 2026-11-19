@@ -1,0 +1,4 @@
+interface:
+  display_name: "BeSafe Motion"
+  short_description: "Motion, logos e aulas com elementos persistentes"
+  default_prompt: "Use $besafe-motion para criar uma aula ou abertura com animações de elementos, logo legível e continuidade visual."
