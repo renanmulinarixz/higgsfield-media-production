@@ -1,0 +1,4 @@
+interface:
+  display_name: "Higgsfield Media Production"
+  short_description: "Choose Higgsfield models and manage generation costs"
+  default_prompt: "Use $higgsfield-media-production to plan or produce media with the models and spending limits appropriate to my project."

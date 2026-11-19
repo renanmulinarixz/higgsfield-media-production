@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "higgsfield-media-production",
+  "version": "1.0.0",
+  "description": "Reusable Higgsfield media planning and production skill with live model discovery, verified benefits, spending boundaries, and motion handoffs.",
+  "author": {
+    "name": "renanmulinarixz",
+    "url": "https://github.com/renanmulinarixz"
+  },
+  "repository": "https://github.com/renanmulinarixz/higgsfield-media-production",
+  "license": "MIT"
+}
