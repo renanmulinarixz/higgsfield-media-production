@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "higgsfield-media-production",
-  "version": "1.1.0",
-  "description": "Higgsfield media planning and production, plus BeSafe educational motion with editable templates, logo references, offline catalogs, and local renderers.",
+  "version": "1.1.1",
+  "description": "Reusable Higgsfield media planning and production skill with live model discovery, verified benefits, spending boundaries, and motion handoffs.",
   "author": {
     "name": "renanmulinarixz",
     "url": "https://github.com/renanmulinarixz"

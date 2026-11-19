@@ -1,15 +1,8 @@
-# Higgsfield Media Production e BeSafe Motion
+# Higgsfield Media Production
 
 Skill reutilizável para planejar e produzir mídia com Higgsfield: escolher modelos pela tarefa, verificar benefícios gratuitos/Unlimited, respeitar o orçamento do projeto e preparar assets ou referências para outras ferramentas.
 
-O pacote 1.1.0 contém duas skills independentes. `higgsfield-media-production` identifica a plataforma e a função; não depende de marca, setor, roteiro, duração, estética ou modelo de assistente específico. `besafe-motion` concentra a direção educativa da BeSafe, templates editáveis, renderizadores locais e referências de animação de logos e elementos.
-
-| Skill | Usar quando |
-| --- | --- |
-| [higgsfield-media-production](skills/higgsfield-media-production/SKILL.md) | Planejar ou produzir mídia com os modelos e benefícios reais do Higgsfield |
-| [besafe-motion](skills/besafe-motion/SKILL.md) | Criar ou revisar aulas BeSafe, demonstrações de interfaces, aberturas e assinaturas de marca |
-
-A skill de motion pode executar a rota local sem conta Higgsfield. Seus renderizadores exigem dependências locais e exportam vídeo sem áudio; aulas narradas precisam de síntese, sincronização e mixagem adicionais. O catálogo oferece um modelo próprio de 20 s/600 frames e oito referências de logos/elementos com 2.102 frames consultáveis.
+O nome `higgsfield-media-production` identifica a plataforma e a função. A skill não depende de marca, setor, roteiro, duração, estética ou modelo de assistente específico.
 
 ## Uso
 
@@ -48,15 +41,9 @@ skills/
       model-selection.md
       spending-and-recovery.md
       motion-handoff.md
-  besafe-motion/
-    SKILL.md
-    agents/openai.yaml
-    references/
-    scripts/
-    assets/
 ```
 
-O pacote contém duas skills no formato [Agent Skills](https://agentskills.io/specification) e um `plugin.json` portátil para hosts compatíveis com [Agent Plugins](https://developers.openai.com/plugins/build/plugins). A distribuição pelo GitHub não equivale à aprovação ou publicação no diretório oficial de plugins.
+O pacote contém uma skill no formato [Agent Skills](https://agentskills.io/specification) e um `plugin.json` portátil para hosts compatíveis com [Agent Plugins](https://developers.openai.com/plugins/build/plugins). A distribuição pelo GitHub não equivale à aprovação ou publicação no diretório oficial de plugins.
 
 Para instalar somente a skill no Codex, peça ao `$skill-installer` para instalar a pasta `skills/higgsfield-media-production` deste repositório, usando a URL correspondente após a publicação:
 
@@ -64,24 +51,6 @@ Para instalar somente a skill no Codex, peça ao `$skill-installer` para instala
 Instale com $skill-installer:
 https://github.com/renanmulinarixz/higgsfield-media-production/tree/main/skills/higgsfield-media-production
 ```
-
-Para instalar a skill de motion, use o mesmo instalador com:
-
-```text
-https://github.com/renanmulinarixz/higgsfield-media-production/tree/main/skills/besafe-motion
-```
-
-Exemplo de uso:
-
-```text
-Use $besafe-motion para preparar uma aula sobre um falso alerta no Gmail.
-Siga o roteiro aprovado, mantenha a mensagem entre os beats e use a voz Francisca Neural.
-Para a abertura, escolha uma técnica de logo que ajude a conduzir o olhar até o remetente.
-```
-
-Na pasta `skills/besafe-motion`, execute `python scripts/prepare_reference_frames.py` para materializar os 2.102 frames do Pinterest e abra `assets/pinterest-logos/index.html`. Cada fonte tem folha de contato, PTS, fases editoriais e origem. Para o modelo próprio, use `python scripts/prepare_reference_frames.py --source model` com FFmpeg instalado e abra `assets/index.html`. Os JPEGs materializados ficam ignorados pelo Git; os oito ZIPs e o MP4 próprio fazem parte do pacote.
-
-Leia [validação e limites](skills/besafe-motion/references/validation.md) para distinguir inspeção visual amostrada, integridade dos arquivos e testes de renderização em cada ambiente. Os quatro vídeos YouTube citados tiveram análise automática e não têm frames internos incluídos.
 
 A pasta inteira também pode ser copiada para o diretório de skills reconhecido pelo agente. No Codex, o guia atual descreve `.agents/skills/` para escopo de projeto e `~/.agents/skills/` para o usuário; siga a [documentação da sua versão](https://learn.chatgpt.com/docs/build-skills) se o caminho for diferente. Publicar este pacote não instala a skill automaticamente na máquina.
 
@@ -95,4 +64,8 @@ Os detalhes são carregados conforme a necessidade: seleção de modelos, gastos
 
 ## Licença e relação com a plataforma
 
-MIT para código e textos próprios. As referências externas e marcas mantêm os direitos dos respectivos titulares; consulte [o aviso do acervo](skills/besafe-motion/assets/pinterest-logos/NOTICE.md) e os registros de origem. Projeto independente, sem vínculo oficial com Higgsfield ou OpenAI. O uso dos serviços continua sujeito às condições dos respectivos provedores.
+MIT. Projeto independente, sem vínculo oficial com Higgsfield ou OpenAI. O uso dos serviços continua sujeito às condições dos respectivos provedores.
+
+## Skill de motion em repositório próprio
+
+O processo geral de criação de motion, adaptável a diferentes temas, marcas e ferramentas, está em [Motion Production](https://github.com/renanmulinarixz/motion-production). Este repositório mantém a skill de uso do Higgsfield: modelos, benefícios, custos, gerações e handoff de mídia.
